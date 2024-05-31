@@ -4,7 +4,7 @@ import buildingImage from "../assets/Image.png";
 import Logo from "../assets/logo.png";
 import { Mail, Lock, Eye, EyeOff } from 'tabler-icons-react';
 
-function Signin() {
+function Changepassword() {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -21,21 +21,14 @@ function Signin() {
       <div className="login-form">
         <div className="signin">
           <img src={Logo} alt="Logo" />
-          <h1>Sign In to your account</h1>
+          <h1>Change Password</h1>
           <h3 className="signin-subtext">
-          Enter your details to proceed further
+          Change your password
         </h3>
         </div>
        
 
         <form>
-          <div className="input-group">
-            <label htmlFor="email">Email</label>
-            <div className="input-with-icon">
-            <Mail className="input-icon" />
-            <input type="email" id="email" placeholder="Enter your email" />
-            </div>
-          </div>
           <div className="input-group">
             <label htmlFor="password">Password</label>
             <div className="input-with-icon"> <Lock className="input-icon" />
@@ -47,15 +40,21 @@ function Signin() {
             
           </div>
           </div>
-          <div className="forgot-password">
-            <a href="/forgetpassword">Forget Password?</a>
+          <div className="input-group">
+            <label htmlFor="confirmpassword">Confirm Password</label>
+            <div className="input-with-icon"> <Lock className="input-icon" />
+            <input
+              type={passwordVisible ? "text" : "password"}
+              id="password"
+              placeholder="Enter your confim password"
+            />
+            
           </div>
-          <button type="submit">Sign In</button>
+          </div>
+          
+          <button type="submit">Send Verification Code</button>
         </form>
-        <p className="terms">
-          By logging in, you are agreeing to our{" "}
-          <a href="#">Terms & Conditions</a>.
-        </p>
+       
       </div>
      
     </div>
@@ -74,4 +73,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default Changepassword;

@@ -1,4 +1,3 @@
-/* src/Login.css */
 
 body,
 html {
@@ -13,11 +12,35 @@ html {
   height: 100vh;
 }
 
+
+@media (min-width: 1300px) {
+  .image-container {
+    width: 50vw;
+    height: 100%;
+
+}
+.image-container img 
+{
+  width:100%
+}
+}
+@media (max-width: 1300px) {
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.login-container2{
+  maxHeight:"calc(100vh - 50px)"
+}
+}
 .login-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  object-fit: cover;
 }
 
 .login-image img {
@@ -32,16 +55,26 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 50px;
-}
-.signin {
-  margin-left: "20px";
-}
-.signin h1 {
-  margin-bottom: 20px;
-  margin-right: 10px;
+  padding: 0 20px;
 }
 
+.signin {
+  margin-left: 0;
+  margin-top:10px;
+}
+
+
+.signin-subtext{
+  color: #898989;
+  font-size: 14px;
+  line-height: 20px;
+  margin-right: 140px;
+  margin-top: -10px;
+  margin-bottom: 40px
+  }
+  .input-with-icon{
+    position:relative
+  }
 .input-group {
   margin-bottom: 20px;
   width: 100%;
@@ -56,24 +89,33 @@ html {
 }
 
 .input-group input {
-  width: 402px;
+  width: 100%;
+  min-width:300px;
   padding: 12px 12px 12px 40px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
-.input-group .material-icons {
+.input-icon {
   position: absolute;
-  top: 30px;
-  left: 10px;
-  color: black; /* Change icon color to black */
+  top: 13%;
+  left: 4%;
+  color: black;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  cursor: pointer;
+  color: black;
 }
 
 .forgot-password {
   text-align: right;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   margin-bottom: 20px;
 }
 
@@ -88,7 +130,7 @@ html {
 
 .login-form button {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   padding: 12px;
   background-color: #007bff;
   border: none;
@@ -118,10 +160,9 @@ html {
 }
 
 .footer {
-  position: absolute;
-  bottom: -20px;
   width: 100%;
   padding: 10px 0;
+  height:48px;
   background-color: #f8f9fa;
   display: flex;
   justify-content: space-between;
@@ -155,4 +196,142 @@ html {
 
 .footer .footer-links a:last-child::after {
   content: "";
+}
+
+@media (min-width: 768px) {
+  .login-container {
+    flex-direction: row;
+  }
+
+  .login-image {
+    flex: 1;
+  }
+
+ 
+
+  .signin {
+    text-align: left;
+  }
+
+ 
+
+  .forgot-password {
+    text-align: right;
+  }
+
+  .login-form button {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-image {
+    height: 50vh;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer-links {
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-image {
+    height: 50vh;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer-links {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    flex-direction: column;
+    align-items: center; /* Center the form elements */  }
+  .login-image {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px; /* Add some margin before the footer */
+  }
+
+  .login-image img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px; /* Adjust the height to better fit mobile screens */
+  }
+
+  .signin img {
+    margin-top: 20px;
+
+
+  }
+ 
+
+  .signin h1 {
+    font-size:17px;
+
+  }
+
+  .signin-subtext {
+    font-size:10px;
+  }
+.input-group{
+  margin-bottom: 20px;
+  
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size:15px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.input-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: black;
+}
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer-links {
+    margin-top: 10px;
+  }
 }
