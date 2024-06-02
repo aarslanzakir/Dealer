@@ -22,9 +22,8 @@ function Forgetpassword() {
 
       <div className="login-form">
         <div className="signin">
-          <img src={Logo} alt="Logo" />
           <h1>Forget Password</h1>
-          <h3 className="signin-subtext">
+          <h3 style={{marginLeft:"10px"}}  className="signin-subtext">
         Change your password
         </h3>
         </div>

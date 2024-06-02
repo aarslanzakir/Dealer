@@ -22,7 +22,7 @@ function Signin() {
         <div className="signin">
           <img src={Logo} alt="Logo" />
           <h1>Sign In to your account</h1>
-          <h3 className="signin-subtext">
+          <h3 style={{marginLeft:"10px"}} className="signin-subtext">
           Enter your details to proceed further
         </h3>
         </div>
