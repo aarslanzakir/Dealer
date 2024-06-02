@@ -162,8 +162,8 @@ html {
 .footer {
   width: 100%;
   padding: 10px 0;
-  height:55px;
-  background-color: red;
+  height:48px;
+  background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -331,7 +331,7 @@ html {
   align-items: center;
   text-align: center;
   height:65px;
-  background-color: red;
+  background-color: #FFFFFF;
 }
 
 .footer .footer-links {
