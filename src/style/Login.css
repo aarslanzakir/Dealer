@@ -162,14 +162,14 @@ html {
 .footer {
   width: 100%;
   padding: 10px 0;
-  height:48px;
+  height:55px;
   background-color: #f8f9fa;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 5px 20px;
 }
 
 .footer p {
